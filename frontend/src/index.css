@@ -1236,3 +1236,27 @@ a:hover {
   gap: 1rem;
   cursor: pointer;
 }
+
+/* Video Frame Responsive Embeds */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Widescreen aspect */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+  background: #000;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+

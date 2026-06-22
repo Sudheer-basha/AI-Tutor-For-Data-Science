@@ -85,15 +85,19 @@ async def seed_data(db: AsyncSession):
     for badge in badges:
         db.add(badge)
 
-    # 4. Syllabus details
+    # 4. Syllabus details with video links
     syllabus = [
         # --- Month 1: Python Fundamentals ---
         {
             "week": 1, "month": 1,
             "title": "Introduction to Python: Variables, Loops & Functions",
-            "content": """# Week 1: Python Fundamentals for Data Science
+            "content": """<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/rfscVS0vtbw" allowfullscreen></iframe>
+</div>
 
-Welcome to your first week! Before diving into pandas or machine learning, you must master the fundamental building blocks of Python. 
+# Week 1: Python Fundamentals for Data Science
+
+Welcome to your first week! Watch the video above to learn Python fundamentals. Below are critical review sheets on topics and subtopics covered:
 
 ### Why Python for Data Science?
 Python is the most popular language in Data Science because it is easy to read, has a rich ecosystem of libraries (NumPy, Pandas, Scikit-Learn), and possesses a massive community.
@@ -185,9 +189,13 @@ Submit your completed Python code in the text box below. The AI tutor will grade
         {
             "week": 2, "month": 1,
             "title": "Numerical Python & Pandas for Data Manipulation",
-            "content": """# Week 2: NumPy & Pandas Fundamentals
+            "content": """<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/vmEHCJofHsg" allowfullscreen></iframe>
+</div>
 
-Today we transition from basic Python to vectorised computing and tabular data analysis using the standard libraries: **NumPy** and **Pandas**.
+# Week 2: NumPy & Pandas Fundamentals
+
+Watch the lecture on Pandas and NumPy above. Here are the core topics and syntax notes:
 
 ### 1. NumPy: Numerical Python
 NumPy provides the `ndarray` object, an efficient multidimensional array.
@@ -261,9 +269,13 @@ import pandas as pd
         {
             "week": 3, "month": 1,
             "title": "Data Cleaning, Handling Missing Values & Wrangling",
-            "content": """# Week 3: Data Cleaning & Wrangling
+            "content": """<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/bDhvCo30gwc" allowfullscreen></iframe>
+</div>
 
-Real-world data is messy, dirty, and incomplete. Data Scientists spend up to 80% of their time cleaning and preparing data.
+# Week 3: Data Cleaning & Wrangling
+
+Watch the walkthrough on data cleaning above. Make sure to study the following notes:
 
 ### 1. Handling Missing Data
 Missing data is usually represented as `NaN` (Not a Number) in Pandas.
@@ -327,9 +339,13 @@ def clean_dataset(df):
         {
             "week": 4, "month": 1,
             "title": "Data Visualization with Matplotlib & Seaborn",
-            "content": """# Week 4: Data Visualization
+            "content": """<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/O5xeyoRL95U" allowfullscreen></iframe>
+</div>
 
-Data visualization is essential for Exploratory Data Analysis (EDA) and communicating insights.
+# Week 4: Data Visualization
+
+Watch the tutorial above for plotting with Matplotlib and Seaborn. Review topics and commands:
 
 ### 1. Matplotlib
 Matplotlib is the core plotting library in Python, offering low-level control.
@@ -392,9 +408,13 @@ Write the code to plot:
         {
             "week": 5, "month": 2,
             "title": "Introduction to Statistical Data Analysis",
-            "content": """# Week 5: Statistics Basics
+            "content": """<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/xxpc-HPKN28" allowfullscreen></iframe>
+</div>
 
-Data Science relies on statistical fundamentals to summarize data and draw mathematical conclusions.
+# Week 5: Statistics Basics
+
+Watch the Statistics lectures above. Review these fundamental mathematical definitions:
 
 ### 1. Measures of Central Tendency
 - **Mean**: The mathematical average.
@@ -434,9 +454,13 @@ Submit your script and written analysis.""",
         {
             "week": 6, "month": 2,
             "title": "Probability Distributions & Hypothesis Testing",
-            "content": """# Week 6: Probability & Hypothesis Testing
+            "content": """<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/tTeMYuS87oU" allowfullscreen></iframe>
+</div>
 
-Hypothesis testing helps us determine if a pattern in data is statistically significant or just random noise.
+# Week 6: Probability & Hypothesis Testing
+
+Watch the lecture on Hypothesis testing above. Study the core testing concepts:
 
 ### 1. Key Concepts
 - **Null Hypothesis (H0)**: Assumption that there is no effect or difference.
@@ -473,9 +497,13 @@ Write a script using `scipy.stats` to:
         {
             "week": 7, "month": 2,
             "title": "Linear Regression and Model Evaluation",
-            "content": """# Week 7: Linear Regression
+            "content": """<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/E5Rjxo4sYLt" allowfullscreen></iframe>
+</div>
 
-Linear Regression predicts a continuous numeric value based on independent variables.
+# Week 7: Linear Regression
+
+Watch the video tutorial on linear regression above. Study these notes:
 
 ### 1. Mathematical Equation
 $$y = \\beta_0 + \\beta_1 x + \\epsilon$$
@@ -531,9 +559,13 @@ Use scikit-learn's `LinearRegression` to:
         {
             "week": 8, "month": 2,
             "title": "Supervised Machine Learning: Classification Algorithms",
-            "content": """# Week 8: Classification Algorithms
+            "content": """<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/I3G0Y5Gsxyg" allowfullscreen></iframe>
+</div>
 
-Classification maps input data into discrete classes (e.g. Spam vs Ham, Disease vs Healthy).
+# Week 8: Classification Algorithms
+
+Watch the video lecture on Machine Learning classification above. Review these notes:
 
 ### 1. Algorithms
 - **Logistic Regression**: Outputs a probability mapped to a sigmoid function.
@@ -573,9 +605,13 @@ Submit the code and explain the difference between Precision and Recall.""",
         {
             "week": 9, "month": 3,
             "title": "Deep Learning: Fundamentals of Neural Networks",
-            "content": """# Week 9: Introduction to Neural Networks
+            "content": """<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/aircAruvnKk" allowfullscreen></iframe>
+</div>
 
-Neural networks mimic the human brain, utilizing layers of interconnected nodes (neurons) to model complex non-linear relationships.
+# Week 9: Introduction to Neural Networks
+
+Watch the visual neural networks lecture above. Here are the core topics covered:
 
 ### 1. The Artificial Neuron (Perceptron)
 An input vector is multiplied by weights, summed with a bias, and passed through an activation function:
@@ -614,9 +650,13 @@ Answer the following questions in a detailed written explanation:
         {
             "week": 10, "month": 3,
             "title": "Building Deep Learning Models with TensorFlow/Keras",
-            "content": """# Week 10: Deep Learning with TensorFlow & Keras
+            "content": """<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/tpCFfeUEGs8" allowfullscreen></iframe>
+</div>
 
-TensorFlow is Google's open-source machine learning library. Keras is the high-level API.
+# Week 10: Deep Learning with TensorFlow & Keras
+
+Watch the TensorFlow course above. Review Keras model configuration syntax:
 
 ### 1. Designing a Sequential Model
 ```python
@@ -668,9 +708,13 @@ Write a Python script using TensorFlow/Keras to:
         {
             "week": 11, "month": 3,
             "title": "Model Deployment & API Development",
-            "content": """# Week 11: Model Deployment
+            "content": """<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/h5wLuVZr0yg" allowfullscreen></iframe>
+</div>
 
-A model is useless if it stays on a Jupyter notebook. Today we learn how to package and deploy our models as web services.
+# Week 11: Model Deployment
+
+Watch the FastAPI model deployment tutorial above. Learn the serialization syntax:
 
 ### 1. Serializing Models (Pickle)
 First, save the trained model to disk:
@@ -726,9 +770,13 @@ Write the complete code for a FastAPI application that:
         {
             "week": 12, "month": 3,
             "title": "Capstone Project: End-to-End Data Science System",
-            "content": """# Week 12: Capstone Project
+            "content": """<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/GLSj2fPpxP8" allowfullscreen></iframe>
+</div>
 
-Congratulations on making it to the final week! This week is dedicated to consolidating everything you've learned.
+# Week 12: Capstone Project
+
+Watch the end-to-end Data Science capstone project guide above. Review the checklist of tasks:
 
 ### The Capstone Project
 You will build an end-to-end data pipeline from scratch:
